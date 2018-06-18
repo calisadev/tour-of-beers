@@ -1,0 +1,8 @@
+<mat-card class="cell-container">
+    <div class="image-container">
+        <app-image-view routerLink="/beers/{{beer.id}}" [src]="beer.image" > </app-image-view>
+    </div>
+    <div class="text-container">
+        <a class="dashboard-cell-link" routerLink="/beers/{{beer.id}}" name="{{beer.name}}" >{{beer.name}}</a>
+    </div>
+</mat-card>

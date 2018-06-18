@@ -1,0 +1,10 @@
+table {
+    width: 100%;
+}
+.image-container {
+    height: 50px;
+    width: 50px;
+}
+.datatable-link {
+    color: white;
+}

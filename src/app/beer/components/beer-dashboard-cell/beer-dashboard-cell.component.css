@@ -1,0 +1,10 @@
+.text-container {
+    text-align: center;
+    margin-top: 24px;
+}
+.image-container {
+    height: 100px;
+}
+.dashboard-cell-link {
+    color: white;
+}

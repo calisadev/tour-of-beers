@@ -1,0 +1,4 @@
+<div class="image-container">
+    <app-image-view (click)="uploadButton.click()" [src]="base64Data" ></app-image-view>
+</div>
+<input class="upload-button" type="file" (change)="onFileChanged($event)" accept='image/*' #uploadButton>

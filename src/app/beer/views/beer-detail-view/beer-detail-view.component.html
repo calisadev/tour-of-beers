@@ -1,0 +1,13 @@
+<app-page-header [title]="title"></app-page-header>
+<mat-card>
+    <mat-chip class="notification-message" *ngIf="message" color="primary" >{{message}}</mat-chip>
+    <div *ngIf="beer">
+        <app-image-upload-button [(base64Data)]="beer.image"></app-image-upload-button>
+        <app-beer-detail [beer] = "beer"> </app-beer-detail>
+        <div class="action-button">
+            <button mat-raised-button type="submit" (click)="saveClick()" class="save-button">Save</button>
+            <button *ngIf="beer.id" mat-raised-button type="submit" (click)="delete()" class="delete-button">Delete</button>
+            <button mat-raised-button (click)="cancel()" class="cancel-button">Cancel</button>
+        </div>
+    </div>
+</mat-card>

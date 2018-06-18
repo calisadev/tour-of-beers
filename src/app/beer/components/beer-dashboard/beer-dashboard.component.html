@@ -1,0 +1,5 @@
+<mat-grid-list cols="4" rowHeight="200px">
+    <mat-grid-tile *ngFor="let beer of beers" >
+        <app-beer-dashboard-cell [beer]="beer"></app-beer-dashboard-cell>
+    </mat-grid-tile>
+</mat-grid-list>

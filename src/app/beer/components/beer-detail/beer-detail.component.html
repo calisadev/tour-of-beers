@@ -1,0 +1,16 @@
+<div *ngIf="beer" class = "beer-detail-container">
+    <mat-form-field *ngIf="beer.id">
+        <input matInput [readonly]="true" placeholder="Id" name="id" [(ngModel)]="beer.id" value= "{{beer.id}}">
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput placeholder="Name" name="name" [(ngModel)]="beer.name" value= "{{beer.name}}">
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput placeholder="Description" name="description" [(ngModel)]="beer.description" value= "{{beer.description}}">
+    </mat-form-field>
+
+    <br>
+    <mat-checkbox class="show-dashboard-checkbox" name="showDashboard" [(ngModel)]="beer.showDashboard" value= "{{beer.showDashboard}}">Show on dashboard</mat-checkbox>
+</div >

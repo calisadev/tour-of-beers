@@ -1,0 +1,34 @@
+<table mat-table [dataSource]= "beers" class="table table-bordered">
+    <ng-container matColumnDef="Id">
+        <th mat-header-cell *matHeaderCellDef> Id </th>
+        <td mat-cell *matCellDef="let beer"> {{beer.id}} </td>
+    </ng-container>
+    <ng-container matColumnDef="Image">
+      <th mat-header-cell *matHeaderCellDef> Image </th>
+      <td mat-cell *matCellDef="let beer"> 
+          <div class="image-container">
+              <app-image-view  routerLink="/beers/{{beer.id}}" [src]="beer.image" > </app-image-view>
+          </div>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="Name">
+        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <td mat-cell *matCellDef="let beer">
+            <a class="datatable-link" routerLink="/beers/{{beer.id}}" name="{{beer.name}}" >{{beer.name}}</a>
+        </td>
+    </ng-container>
+    <ng-container matColumnDef="Description">
+        <th mat-header-cell *matHeaderCellDef> Description </th>
+        <td mat-cell *matCellDef="let beer">
+                <p>{{beer.description}}</p>
+        </td>
+    </ng-container>
+    <ng-container matColumnDef="ShowDashboard">
+            <th mat-header-cell *matHeaderCellDef> Show on dashboard </th>
+            <td mat-cell *matCellDef="let beer">
+                <p *ngIf="beer.showDashboard" >YES</p>
+            </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
